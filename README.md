@@ -303,3 +303,11 @@ python src/benchmark.py \
   无 bf16 支持的卡（如 V100）用 `fp32`。
 - **长音频务必先 VAD 切段**：Nano 在过长片段上会退化并出现重复性幻觉，
   分段 + 外扩 + 超长二次切分是离线模式的核心思路。
+
+---
+
+## 参考仓库
+
+- [FunASR (ModelScope)](https://github.com/modelscope/FunASR) —— 本项目的基础框架。
+  FSMN-VAD、CAM++ 说话人分离、websocket 流式服务、vLLM 推理实现等均来自或参考
+  该仓库（`examples/industrial_data_pretraining/fun_asr_nano/` 下的示例）。
